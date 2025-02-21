@@ -1,16 +1,12 @@
-name: Simple Workflow
+name: GitHub Action
 
 on: 
-  - push
-  - pull_request
+  push:
+  pull_request:
 
 jobs:
-  build:
+  say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Echo a message
-        run: echo "GitHub Actions is running!"
-
+      - name: Afficher un message
+        run: echo "GitHub Actions fonctionne chez moi comme dhab!"
